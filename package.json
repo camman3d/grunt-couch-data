@@ -38,6 +38,6 @@
     "grunt": "~0.4.5"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin", "grunt", "couch", "couchdb", "fixture", "migration", "synchronization"
   ]
 }
