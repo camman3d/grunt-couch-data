@@ -26,10 +26,11 @@ In your project's Gruntfile, add a section named `couch_data` to the data object
 grunt.initConfig({
   couch_data: {
     options: {
-      // Task-specific options go here.
+      dbHost: 'http://localhost:5984/',
+      verbose: true
     },
-    your_target: {
-      // Target-specific file lists and/or options go here.
+    dev: {
+      src: 'fixtures/dev/*.json'
     },
   },
 });
@@ -37,48 +38,51 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.dbHost
 Type: `String`
-Default value: `',  '`
+Default value: None
 
-A string value that is used to do something with whatever.
+Specifies the Couch DB server. It must end with a slash.
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
+#### options.verbose
+Type: `Boolean`
+Default value: `false`
 
-A string value that is used to do something else with whatever else.
+Enables or disables verbose output.
 
 ### Usage Examples
+You must specify the .json fixture files, either by providing a `files` array or by providing a files `src` array within a particular target.
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  couch_data: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+#### No target
+For a simple setup, just list out your fixture files in the `files` property.
 
 ```js
 grunt.initConfig({
   couch_data: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      dbHost: 'http://localhost:5984/',
     },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+    files: [ 'fixtures/*.json' ]
+  }
+});
+```
+
+#### Target-specific setup
+You can have different fixtures loaded based on your target.
+
+```js
+grunt.initConfig({
+  couch_data: {
+    options: {
+      dbHost: 'http://localhost:5984/',
     },
-  },
+    dev: {
+      src: [ 'fixtures/dev/*.json' ]
+    },
+    prod: {
+      src: [ 'fixtures/prod/*.json' ]
+    }
+  }
 });
 ```
 
