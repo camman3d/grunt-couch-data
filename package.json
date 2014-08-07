@@ -1,7 +1,7 @@
 {
   "name": "grunt-couch-data",
   "description": "Synchronizes JSON fixtures with CouchDB",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/camman3d/grunt-couch-data",
   "author": {
     "name": "Josh",
