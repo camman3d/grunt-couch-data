@@ -5,7 +5,10 @@
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the
+[Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a
+[Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with
+that process, you may install this plugin with this command:
 
 ```shell
 npm install grunt-couch-data --save-dev
@@ -51,7 +54,8 @@ Default value: `false`
 Enables or disables verbose output.
 
 ### Usage Examples
-You must specify the .json fixture files, either by providing a `files` array or by providing a files `src` array within a particular target.
+You must specify the .json fixture files, either by providing a `files` array or by providing a files `src` array within
+a particular target.
 
 #### No target
 For a simple setup, just list out your fixture files in the `files` property.
@@ -86,8 +90,13 @@ grunt.initConfig({
 });
 ```
 
+## Notes
+This currently only works without authentication, so your sever must be in _Admin Party_ mode. This will be changed in a
+later release to allow for authentication.
+
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed
+functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
 _(Nothing yet)_
