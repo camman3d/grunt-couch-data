@@ -37,9 +37,15 @@
         "async": "^0.9.0"
     },
     "peerDependencies": {
-        "grunt": "~0.4.5"
+        "grunt": ">=0.4.0"
     },
     "keywords": [
-        "gruntplugin", "grunt", "couch", "couchdb", "fixture", "migration", "synchronization"
+        "gruntplugin",
+        "grunt",
+        "couch",
+        "couchdb",
+        "fixture",
+        "migration",
+        "synchronization"
     ]
 }
